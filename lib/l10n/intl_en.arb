@@ -1,0 +1,19 @@
+{
+  "login": "Login",
+"signup": "Sign Up",
+  "firstname": "First Name",
+  "firstnamehint": "Please Enter Your First Name",
+  "lastname": "Second Name",
+  "secondnamehint": "Please Enter Your Second Name",
+  "emailhint":"Please Enter Your E-Mail Address",
+  "email": "E-Mail",
+  "password": "Password",
+  "passwordhint": "Please Enter Your Password",
+  "location": "Location",
+  "male": "Male",
+  "female": "Female",
+  "address": "Address",
+  "booknow": "Book Now",
+  "offersdetails": "Offers Details",
+  "addressindetailhint": "Please Enter Your Address In Detail"
+}
