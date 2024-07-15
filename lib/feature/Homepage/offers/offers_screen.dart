@@ -1,5 +1,6 @@
 import 'package:cleanapp/feature/Homepage/offers/offers_details.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'custom_item_offers.dart';
 
 class OffersScreen extends StatefulWidget {
@@ -59,13 +60,13 @@ class _OffersScreenState extends State<OffersScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigo,
+      backgroundColor: Colors.amber,
       appBar: AppBar(
-        backgroundColor: Colors.indigo,
+        backgroundColor: Colors.amber,
         centerTitle: true,
         title: const Text(
           "العروض",
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         leading: IconButton(
             onPressed: () {
@@ -84,7 +85,7 @@ class _OffersScreenState extends State<OffersScreen> {
           children: [
             SizedBox(
               width: double.infinity,
-              height: 800,
+             // height: 670.h,
               child: ListView.builder(
                   scrollDirection: Axis.vertical,
                   physics: BouncingScrollPhysics(),

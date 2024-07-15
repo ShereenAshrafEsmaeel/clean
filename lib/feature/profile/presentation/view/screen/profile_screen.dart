@@ -1,6 +1,3 @@
-import 'package:awesome_dialog/awesome_dialog.dart';
-import 'package:cleanapp/feature/Auth/presentation/view/screen/auth_screen.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,7 +6,6 @@ import '../../../../../core/const/constant.dart';
 import '../../../../Homepage/drawer.dart';
 import '../../manager/profile_cubit.dart';
 import '../widget/item_profilePage.dart';
-import '../widget/small_container_icon.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -52,12 +48,12 @@ backgroundColor: Colors.amber,
                   backgroundColor: Colors.amber,
                 ),
                 // drawer
-                endDrawer: Directionality(
+                endDrawer: const Directionality(
                     textDirection: TextDirection.rtl, child: MyDrawer()),
                 body: ProfileCubit.get(context).userModel != null
                     ? Stack(
                       children:[ SingleChildScrollView(
-                        physics: BouncingScrollPhysics(),
+                        physics: const BouncingScrollPhysics(),
                         child: Container(
                             height: 800.h,
                             decoration:  BoxDecoration(
@@ -74,7 +70,7 @@ backgroundColor: Colors.amber,
                                       Stack(
                                         children: [
                                           // container image and name
-                                          Container(
+                                          SizedBox(
                                             width: width,
                                             height: height * 0.25,
                                           ),
@@ -150,7 +146,7 @@ backgroundColor: Colors.amber,
 
                                       // card of icon and get data
                                       SizedBox(
-                                        height: height * 0.70,
+                                        height: height * 0.75,
                                         child: Center(
                                           child: Container(
                                             decoration: BoxDecoration(
@@ -220,7 +216,7 @@ backgroundColor: Colors.amber,
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           " Have Account",
                           //style: TextStyles.font18grey500weight,
                         ),
@@ -229,14 +225,14 @@ backgroundColor: Colors.amber,
                             onTap: () {
                               Navigator.of(context)
                                   .push(MaterialPageRoute(builder: (_) {
-                                return ProfileScreen();
+                                return const ProfileScreen();
                               }));
                             },
                             child: GestureDetector(
                                 onTap: () {
                                   Navigator.of(context)
                                       .push(MaterialPageRoute(builder: (_) {
-                                    return ProfileScreen();
+                                    return const ProfileScreen();
                                   }));
                                 },
                                 child: const Text(
@@ -252,7 +248,7 @@ backgroundColor: Colors.amber,
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           "Create New Account",
                           //  style: TextStyles.font18grey500weight,
                         ),
@@ -261,7 +257,7 @@ backgroundColor: Colors.amber,
                             onTap: () {
                               Navigator.of(context)
                                   .push(MaterialPageRoute(builder: (_) {
-                                return ProfileScreen();
+                                return const ProfileScreen();
                               }));
                             },
                             child: const Text(

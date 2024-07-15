@@ -74,14 +74,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
             children: [
               //name
               CustomTextFormField(
-                label:S.of(context).firstname ,
+                label: S
+                    .of(context)
+                    .firstname,
                 controller: firstNameController,
                 keyboardType: TextInputType.text,
                 prefixIcon: const Icon(Icons.person_2_outlined,
                     color: ColorManger.iconColor),
                 validator: 'الاسم الاول',
-                hint: S.of(context).firstnamehint,
-
+                hint: S
+                    .of(context)
+                    .firstnamehint,
               ),
               //space
               SizedBox(
@@ -92,13 +95,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
               //last name
               CustomTextFormField(
-                label: S.of(context).lastname,
+                label: S
+                    .of(context)
+                    .lastname,
                 controller: lastNameController,
                 keyboardType: TextInputType.text,
                 prefixIcon: const Icon(Icons.person_2_outlined,
                     color: ColorManger.iconColor),
                 validator: 'Please Enter your Last Name',
-                hint: S.of(context).lastname,
+                hint: S
+                    .of(context)
+                    .lastname,
               ),
 
               //space
@@ -113,8 +120,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   color: ColorManger.iconColor,
                 ),
                 keyboardType: TextInputType.text,
-                hint: S.of(context).emailhint,
-                label: S.of(context).email,
+                hint: S
+                    .of(context)
+                    .emailhint,
+                label: S
+                    .of(context)
+                    .email,
                 controller: emailController,
                 validator: 'Please Enter your Email',
               ),
@@ -124,12 +135,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
               //password
               CustomTextFormField(
-                label: S.of(context).password,
+                label: S
+                    .of(context)
+                    .password,
                 controller: passwordController,
                 keyboardType: TextInputType.visiblePassword,
-                prefixIcon:
-                    const Icon(Icons.lock_outline, color: ColorManger.iconColor),
-                hint: S.of(context).passwordhint,
+                prefixIcon: const Icon(Icons.lock_outline,
+                    color: ColorManger.iconColor),
+                hint: S
+                    .of(context)
+                    .passwordhint,
                 suffixIcon: IconButton(
                   icon: Icon(
                     // Based on passwordVisible state choose the icon
@@ -183,14 +198,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
               ///////////////////////////////////////////////////////////////////////////////
 
-          //location dropdown
+              //location dropdown
               DropdownButtonFormField(
                 menuMaxHeight: 300,
                 isExpanded: true,
                 decoration: InputDecoration(
                   fillColor: Colors.white,
                   filled: true,
-                  labelText: S.of(context).location,
+                  labelText: S
+                      .of(context)
+                      .location,
                   labelStyle: TextStyle(
                       fontSize: 15.sp,
                       color: Colors.blueAccent,
@@ -232,7 +249,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
               ///////////////////////////////////////////////////////////////////////////////
 
-          //row of gender
+              //row of gender
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -260,11 +277,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               borderRadius: BorderRadius.circular(15)),
                           child: Icon(
                             EvaIcons.personOutline,
-                            color: isMale ? Colors.white : ColorManger.iconColor,
+                            color:
+                            isMale ? Colors.white : ColorManger.iconColor,
                           ),
                         ),
-                         Text(
-                          S.of(context).male,
+                        Text(
+                          S
+                              .of(context)
+                              .male,
                           style: TextStyle(color: ColorManger.textColor1),
                         )
                       ],
@@ -297,11 +317,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               borderRadius: BorderRadius.circular(15)),
                           child: Icon(
                             EvaIcons.personOutline,
-                            color: isMale ? ColorManger.iconColor : Colors.white,
+                            color:
+                            isMale ? ColorManger.iconColor : Colors.white,
                           ),
                         ),
-                       Text(
-                          S.of(context).female,
+                        Text(
+                          S
+                              .of(context)
+                              .female,
                           style: TextStyle(color: ColorManger.textColor1),
                         )
                       ],
@@ -325,20 +348,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       password: passwordController.text,
                       phone: phoneController.text,
                       location: DropdownManager.initialValueLocation,
-                      // day: DropdownManager.initialValueDay,
-                      //month: DropdownManager.initialValueMonth,
-                      //year: DropdownManager.initialValueYear,
                       //type: DropdownManager.initialValueGender
                     )
                         .then((value) {
                       clear();
 
                       flutterFunction(
-                          color: Colors.greenAccent, text: "تم انشاء حساب بنجاح");
+                          color: Colors.greenAccent,
+                          text: "تم انشاء حساب بنجاح");
 
                       Constant.uid = CacheHelper.getData(key: "uid");
                       print("UId is =====>>>>> ${Constant.uid}");
-                      Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (_) {
                         return HomePage();
                       }));
                     });
@@ -361,14 +383,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                   child: Center(
                     child: Text(
-                      S.of(context).signup,
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600,color: Colors.white),
+                      S
+                          .of(context)
+                          .signup,
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white),
                     ),
                   ),
                 ),
               ),
 
-          //container of terms and conditions
+              //container of terms and conditions
               Container(
                 width: 200,
                 margin: const EdgeInsets.only(top: 20),

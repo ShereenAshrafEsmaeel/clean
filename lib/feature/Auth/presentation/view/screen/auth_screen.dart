@@ -48,7 +48,7 @@ class _AuthScreenState extends State<AuthScreen> {
         //amber Container
         Positioned(
           child: Container(
-              width: double.infinity,
+              width: 432.w,
               height: 500.h,
               decoration: BoxDecoration(
                   color: Colors.amber,

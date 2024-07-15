@@ -123,7 +123,7 @@ class _BookingPageState extends State<BookingPage> {
       body: Stack(children: [
         Container(
           width: 390.w,
-          height: 900.h,
+          height: 812.h,
           color: Colors.amber,
         ),
         SingleChildScrollView(

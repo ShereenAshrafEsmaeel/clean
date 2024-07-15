@@ -20,16 +20,16 @@ class CustomMostRequested extends StatelessWidget {
     return Stack(
       children: [
         Padding(
-          padding: EdgeInsets.only(right: 10.w,left: 10.w,top: 10.h),
+          padding: EdgeInsets.only(right: 10,left: 10,top: 10),
           child: Container(
-            height: 85.h,
+            height: 90,
             decoration: BoxDecoration(
               color: Colors.amber,
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(15.r),
-                topRight: Radius.circular(15.r),
-                bottomLeft: Radius.circular(75.r),
-                bottomRight: Radius.circular(15.r),
+                topLeft: Radius.circular(15),
+                topRight: Radius.circular(15),
+                bottomLeft: Radius.circular(75),
+                bottomRight: Radius.circular(15),
               ),
             ),
             child: Row(
@@ -38,7 +38,7 @@ class CustomMostRequested extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                     children:[ Padding(
-                      padding: EdgeInsets.only(right: 10.w),
+                      padding: EdgeInsets.only(right: 10),
                       child: Column(
                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
@@ -46,11 +46,11 @@ class CustomMostRequested extends StatelessWidget {
                             title1,
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                fontSize: 18.sp,
+                                fontSize: 18,
                                 color: Colors.black),
                           ),
                           SizedBox(
-                            height: 5.h,
+                            height: 5,
                           ),
                           Row(
                             children: [
@@ -64,7 +64,7 @@ class CustomMostRequested extends StatelessWidget {
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black,
-                                  fontSize: 18.sp,
+                                  fontSize: 18,
                                 ),
                               ),
                             ],
@@ -75,13 +75,13 @@ class CustomMostRequested extends StatelessWidget {
                   ]),
 //image container
                 Container(
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(15.r)),
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(15.r),
+                    borderRadius: BorderRadius.circular(15),
                     child: Image.network(
                       image,
-                      width: 160.w,
-                      height: 90.h,
+                      width: 160,
+                      height: 90,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -91,7 +91,7 @@ class CustomMostRequested extends StatelessWidget {
           ),
         ),
         Positioned(
-          right: 270.w,
+          right: 280,
           bottom: 0,
           left: 0,
           child: ContainerArrow(onpress: () {

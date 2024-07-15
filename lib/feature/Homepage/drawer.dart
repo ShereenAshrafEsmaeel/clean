@@ -25,7 +25,7 @@ class MyDrawer extends StatelessWidget {
               ),
             ),
           ),
-          ListTile(
+         /* ListTile(
             title: const Text('الصفحة الرئيسية'),
             leading: const Icon(Icons.home_outlined),
             onTap: () {
@@ -33,17 +33,19 @@ class MyDrawer extends StatelessWidget {
                 return HomePage();
               }));
             },
-          ),
+          )
+          ,
+          */
           ListTile(
             title: const Text('الصفحة الشخصية'),
             leading: const Icon(Icons.person),
             onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (_){
-                  return ProfileScreen();
+                  return const ProfileScreen();
                 }));
             },
           ),
-          ListTile(
+         /* ListTile(
             title: const Text('تسجيل الدخول'),
             leading: const Icon(Icons.home),
             onTap: () {
@@ -51,7 +53,9 @@ class MyDrawer extends StatelessWidget {
                 return AuthScreen();
               }));
             },
-          ),
+          )
+          ,
+          */
           ListTile(
             title: const Text('نظافه منزليه'),
             leading: const Icon(Icons.home),
@@ -67,7 +71,7 @@ class MyDrawer extends StatelessWidget {
             leading: const Icon(Icons.home),
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(builder: (_){
-                return OffersScreen();
+                return const OffersScreen();
               }));
             },
           ),
@@ -86,7 +90,7 @@ class MyDrawer extends StatelessWidget {
             },
           ),
 
-          SizedBox(
+          const SizedBox(
             height:95,
           ),
           ListTile(
@@ -108,7 +112,7 @@ class MyDrawer extends StatelessWidget {
                     MaterialPageRoute(
                         builder:
                             (_) {
-                          return AuthScreen();
+                          return const AuthScreen();
                         }));
               });
             },

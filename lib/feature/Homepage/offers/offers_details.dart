@@ -54,8 +54,8 @@ class OffersDetails extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              width: double.infinity,
-              height: 200,
+              width: 432.w,
+              height: 170.h,
               child: Stack(
                 children: [
                   //image
@@ -65,7 +65,7 @@ class OffersDetails extends StatelessWidget {
                     left: 0,
                     bottom: 0,
                     child: Container(
-                      height: 700,
+                      height: 700.h,
                       decoration:  BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.only(

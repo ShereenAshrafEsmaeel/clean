@@ -1,5 +1,6 @@
 import 'package:cleanapp/feature/Homepage/offers/offers_details.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../Mostrequested/mostrequested_arrow.dart';
 
@@ -30,7 +31,7 @@ class CustomOffers extends StatelessWidget {
           child: Container(
             height: 100,
             decoration: BoxDecoration(
-              color: Colors.indigo[300],
+              color: Colors.white70,
               borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(15),
                 topRight: Radius.circular(15),
@@ -50,13 +51,13 @@ class CustomOffers extends StatelessWidget {
                       children: [
                         Text(
                           title1,
-                          style: const TextStyle(
+                          style:  TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 20,
-                              color: Colors.white),
+                              fontSize: 18.sp,
+                              color: Colors.black),
                         ),
                         SizedBox(
-                          height: 5,
+                          height: 5.h,
                         ),
                         /* Text(
                           title2,
@@ -76,32 +77,32 @@ class CustomOffers extends StatelessWidget {
                           children: [
                             Text(
                               "جنيه",
-                              style: TextStyle(color: Colors.white),
+                              style: TextStyle(color: Colors.black),
                             ),
                             Text(
                               title3,
-                              style: const TextStyle(
+                              style:  TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  fontSize: 18,
+                                  color: Colors.black,
+                                  fontSize: 16.sp,
                                   decoration: TextDecoration.lineThrough),
                             ),
                             const Text(
                               " بدلا من ",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.white),
+                                  color: Colors.black),
                             ),
                             Text(
                               "جنيه",
-                              style: TextStyle(color: Colors.white),
+                              style: TextStyle(color: Colors.black),
                             ),
                             Text(
                               title4,
-                              style: const TextStyle(
+                              style:  TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                  color: Colors.white),
+                                  fontSize: 16.sp,
+                                  color: Colors.black),
                             ),
                           ],
                         )

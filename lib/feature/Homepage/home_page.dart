@@ -1,4 +1,4 @@
-import 'package:cleanapp/feature/Homepage/Mostrequested/mostrequested.dart';
+﻿import 'package:cleanapp/feature/Homepage/Mostrequested/mostrequested.dart';
 import 'package:cleanapp/feature/Homepage/categories/custom_category.dart';
 import 'package:cleanapp/feature/Homepage/drawer.dart';
 import 'package:cleanapp/feature/Homepage/offers/offers_details.dart';
@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
   List Offerdata = [
     OfferModel(
         image:
-            "https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?w=740&t=st=1705064577~exp=1705065177~hmac=e69ceee1727ceaee9899a958b06ef0c75ea849bce40038528d6f1bdb21061618",
+        "https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?w=740&t=st=1705064577~exp=1705065177~hmac=e69ceee1727ceaee9899a958b06ef0c75ea849bce40038528d6f1bdb21061618",
         offername: "نظافه منزليه شامله",
         price: "500",
         area: "100",
@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
         rate: "4.5"),
     OfferModel(
         image:
-            "https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?w=740&t=st=1705064577~exp=1705065177~hmac=e69ceee1727ceaee9899a958b06ef0c75ea849bce40038528d6f1bdb21061618",
+        "https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?w=740&t=st=1705064577~exp=1705065177~hmac=e69ceee1727ceaee9899a958b06ef0c75ea849bce40038528d6f1bdb21061618",
         offername: "نظافه منزليه سطحيه",
         price: "400",
         area: "90",
@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
         rate: "3.5"),
     OfferModel(
         image:
-            "https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?w=740&t=st=1705064577~exp=1705065177~hmac=e69ceee1727ceaee9899a958b06ef0c75ea849bce40038528d6f1bdb21061618",
+        "https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?w=740&t=st=1705064577~exp=1705065177~hmac=e69ceee1727ceaee9899a958b06ef0c75ea849bce40038528d6f1bdb21061618",
         offername: "نظافه منزليه شامله",
         price: "300",
         area: "100",
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
   }
 
   void setStat(String status) async {
@@ -90,13 +90,18 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
 
   @override
   void dispose() {
-    WidgetsBinding.instance!.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
 
   //==============================================
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery
+        .of(context)
+        .size
+        .width;
+    //var height = MediaQuery.of(context).size.height;
     return Scaffold(
       //appBar
       appBar: AppBar(
@@ -117,20 +122,20 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
       ),
       // drawer
       endDrawer:
-          const Directionality(textDirection: TextDirection.rtl, child: MyDrawer()),
+      const Directionality(textDirection: TextDirection.rtl, child: MyDrawer()),
 
       body: Stack(children: [
         Container(
-          width: 600.w,
-          height: double.infinity,
+          width: 432.w,
+          height: 812.h,
           color: Colors.amber,
         ),
         SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           scrollDirection: Axis.vertical,
           child: Container(
-            width: 500.w,
-            height: 810.h,
+            width: 432.w,
+            // height: 812.h,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(55.r), color: Colors.white),
             child: Column(
@@ -162,7 +167,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
                         ),
                       ),
                       //===============================
-SizedBox(width: 220.w,),
+                      SizedBox(width: width * 0.52,),
                       //==================================
                       Text(
                         "العروض ",
@@ -177,7 +182,7 @@ SizedBox(width: 220.w,),
 
                 SizedBox(height: 10.h),
                 Container(
-                  height: 150.h,
+                  height: 170.h,
                   child: PageView.builder(
                     controller: _controller,
                     scrollDirection: Axis.horizontal,
@@ -217,7 +222,7 @@ SizedBox(width: 220.w,),
                   ),
                 ),
                 SizedBox(
-                  height: 5.h,
+                  height: 20.h,
                 ),
                 /////////////////////////////////////////////////////////////////////////
                 //الخدمات
@@ -246,14 +251,14 @@ SizedBox(width: 220.w,),
                     children: [
                       const CategoryScreen(
                           imagePath:
-                              "https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?w=740&t=st=1705064577~exp=1705065177~hmac=e69ceee1727ceaee9899a958b06ef0c75ea849bce40038528d6f1bdb21061618",
+                          "https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?w=740&t=st=1705064577~exp=1705065177~hmac=e69ceee1727ceaee9899a958b06ef0c75ea849bce40038528d6f1bdb21061618",
                           buttonText: "نظافه مفروشات"),
                       SizedBox(
-                        width: 25.w,
+                        width: 15.w,
                       ),
                       const CategoryScreen(
                           imagePath:
-                              "https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?w=740&t=st=1705064577~exp=1705065177~hmac=e69ceee1727ceaee9899a958b06ef0c75ea849bce40038528d6f1bdb21061618",
+                          "https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?w=740&t=st=1705064577~exp=1705065177~hmac=e69ceee1727ceaee9899a958b06ef0c75ea849bce40038528d6f1bdb21061618",
                           buttonText: "نظافه منزليه")
                     ],
                   ),
@@ -282,7 +287,7 @@ SizedBox(width: 220.w,),
                                 fontWeight: FontWeight.w900,
                                 color: Colors.grey[700]),
                           )),
-                      SizedBox(width: 140.w,),
+                      SizedBox(width: width * 0.32,),
                       Text(
                         "الخدمات الاكثر طلبا",
                         style: TextStyle(
@@ -301,22 +306,23 @@ SizedBox(width: 220.w,),
                     children: [
                       CustomMostRequested(
                         image:
-                            "https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?w=740&t=st=1705064577~exp=1705065177~hmac=e69ceee1727ceaee9899a958b06ef0c75ea849bce40038528d6f1bdb21061618",
+                        "https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?w=740&t=st=1705064577~exp=1705065177~hmac=e69ceee1727ceaee9899a958b06ef0c75ea849bce40038528d6f1bdb21061618",
                         title1: "نظافه منزليه شامله",
                         title3: "500",
                       ),
                       CustomMostRequested(
                         image:
-                            "https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?w=740&t=st=1705064577~exp=1705065177~hmac=e69ceee1727ceaee9899a958b06ef0c75ea849bce40038528d6f1bdb21061618",
+                        "https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?w=740&t=st=1705064577~exp=1705065177~hmac=e69ceee1727ceaee9899a958b06ef0c75ea849bce40038528d6f1bdb21061618",
                         title1: "نظافه منزليه شامله",
                         title3: "500",
                       ),
                       CustomMostRequested(
                         image:
-                            "https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?w=740&t=st=1705064577~exp=1705065177~hmac=e69ceee1727ceaee9899a958b06ef0c75ea849bce40038528d6f1bdb21061618",
+                        "https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?w=740&t=st=1705064577~exp=1705065177~hmac=e69ceee1727ceaee9899a958b06ef0c75ea849bce40038528d6f1bdb21061618",
                         title1: "نظافه منزليه عميقه",
                         title3: "800",
                       ),
+                      SizedBox(height: 10.h,)
                     ],
                   ),
                 )

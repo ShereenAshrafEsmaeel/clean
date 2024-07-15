@@ -20,8 +20,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
-
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -45,8 +43,7 @@ class _MyAppState extends State<MyApp> {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: S.delegate.supportedLocales,
-          home:HomePage()
-          //Constant.uid == null ? const AuthScreen() : HomePage(),
+          home: Constant.uid == null ? const AuthScreen() : HomePage(),
         ),
       ),
     );

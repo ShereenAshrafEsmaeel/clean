@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CategoryScreen extends StatelessWidget {
   final String imagePath;
@@ -13,10 +14,10 @@ class CategoryScreen extends StatelessWidget {
       children: [
         //image
         Container(
-          height: 100,
+          height: 95.h,
           decoration: BoxDecoration(
               color: Colors.grey[100],
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10.r),
               boxShadow: [
                 BoxShadow(
                     color: Colors.grey.shade400,
@@ -25,7 +26,7 @@ class CategoryScreen extends StatelessWidget {
               ]),
           child: Center(
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(20.r),
               child: Image(
                 image: NetworkImage(imagePath),
               ),

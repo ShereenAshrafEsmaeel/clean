@@ -85,8 +85,8 @@ class _MostRequestedState extends State<MostRequested> {
 
       Stack(
         children:[ Container(
-          width: 600.w,
-          height: double.infinity,
+          width: 432.w,
+          height: 812.h,
 
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(40.r), color: Colors.white,),
           child: SingleChildScrollView(
@@ -95,8 +95,8 @@ class _MostRequestedState extends State<MostRequested> {
             child: Column(
               children: [
                 SizedBox(
-                  width: double.infinity,
-                  height:680.h,
+                  width: 432.w,
+                 // height:680.h,
                   child: ListView.builder(
                       scrollDirection: Axis.vertical,
                       physics: BouncingScrollPhysics(),
